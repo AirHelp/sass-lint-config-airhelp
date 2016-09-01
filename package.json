@@ -1,0 +1,31 @@
+{
+  "name": "sass-lint-config-airhelp",
+  "version": "1.0.0",
+  "description": "AirHelp SASSLint shareable config",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "changelog": "node_modules/.bin/changelog > CHANGELOG.md"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AirHelp/sass-lint-config-airhelp.git"
+  },
+  "keywords": [
+    "sass",
+    "sass-lint",
+    "scss",
+    "scss-lint",
+    "sass-lint-config",
+    "scss-lint-config",
+    "AirHelp"
+  ],
+  "author": "Rafal Leszczynski",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AirHelp/sass-lint-config-airhelp/issues"
+  },
+  "homepage": "https://github.com/AirHelp/sass-lint-config-airhelp#readme",
+  "devDependencies": {
+    "simple-git-changelog": "^1.5.0"
+  }
+}
