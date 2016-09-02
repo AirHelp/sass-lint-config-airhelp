@@ -1,4 +1,7 @@
 
+## v1.1.0
+- fix typo in config file name ([c677322](https://github.com/AirHelp/sass-lint-config-airhelp/commit/c677322135a0976ee83c4888f26d6e3f356e2ad1))
+
 ## v1.0.0
 - add initial config rules proposal ([7d447f5](https://github.com/AirHelp/sass-lint-config-airhelp/commit/7d447f5e52f95590b314c87bb088c2965a8a1d63))
 - add empty changelog ([40e7092](https://github.com/AirHelp/sass-lint-config-airhelp/commit/40e70921817e89fc4b328a077e89749a36f8b250))
