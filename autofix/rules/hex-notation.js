@@ -4,9 +4,9 @@ function hexNotation(tree) {
   tree.traverse(function (node, index, parent) {
     if (node.is('color')) {
       if (/[a-z]/.test(node.content)) {
-        fixCount++;
-
         node.content = node.content.toUpperCase();
+
+        fixCount++;
       }
     }
   });
