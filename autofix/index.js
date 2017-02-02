@@ -3,10 +3,11 @@ const fs = require('fs');
 const path = require('path');
 const walkSync = require('walk-sync');
 const yargs = require('yargs');
-const rules = require('./rules');
+const rulesFix = require('./rules');
 
-const { argv } = yargs;
 const { log } = console;
+
+const { rules, dir } = yargs.array('dir').array('rules').argv;
 
 // configuration
 const root = path.join(path.dirname(require.main.filename), '..');
@@ -44,7 +45,7 @@ scssFiles.forEach(file => {
 
   // for each rule, call with current file contents
   Object.keys(rules).forEach(rule => {
-    const fixedCount = rules[rule](parsedTree);
+    const fixedCount = rulesFix[rule](parsedTree);
     fixStatistics[rule] += fixedCount;
   });
 
