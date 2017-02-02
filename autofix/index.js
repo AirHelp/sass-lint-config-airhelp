@@ -7,14 +7,12 @@ const rulesFix = require('./rules');
 
 const { log } = console;
 
-const { rules, dir } = yargs.array('dir').array('rules').argv;
+const { rules, fixDirectories } = yargs.array('dir').array('rules').argv;
 
 // configuration
 const root = path.join(path.dirname(require.main.filename), '..');
 
 // prepare lookup
-const fixDirectories = argv._;
-
 const scssFiles = fixDirectories.reduce((currentFiles, directory) => {
   const directoryPath = path.join(root, directory);
   const directoryFiles = walkSync(directoryPath)
