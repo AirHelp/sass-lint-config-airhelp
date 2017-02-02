@@ -12,7 +12,7 @@ let { rules, dir } = yargs.array('dir').array('rules').argv;
 rules = rules.map(rule => rule.replace(/-([a-z])/g, (m, w) => w.toUpperCase())); // camelCased
 
 // configuration
-const root = path.join(path.dirname(require.main.filename), '..');
+const root = process.cwd();
 
 // prepare lookup
 const fixDirectories = dir;
