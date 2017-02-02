@@ -3,16 +3,19 @@ const fs = require('fs');
 const path = require('path');
 const walkSync = require('walk-sync');
 const yargs = require('yargs');
-const rulesFix = require('./rules');
+const rulesMethods = require('./rules');
 
 const { log } = console;
+let { rules, dir } = yargs.array('dir').array('rules').argv;
 
-const { rules, fixDirectories } = yargs.array('dir').array('rules').argv;
+// process user inputs
+rules = rules.map(rule => rule.replace(/-([a-z])/g, (m, w) => w.toUpperCase())); // camelCased
 
 // configuration
 const root = path.join(path.dirname(require.main.filename), '..');
 
 // prepare lookup
+const fixDirectories = dir;
 const scssFiles = fixDirectories.reduce((currentFiles, directory) => {
   const directoryPath = path.join(root, directory);
   const directoryFiles = walkSync(directoryPath)
@@ -26,7 +29,7 @@ const scssFiles = fixDirectories.reduce((currentFiles, directory) => {
 
 // define statistics rule map
 const fixStatistics = {};
-Object.keys(rules).forEach(rule => {
+rules.forEach(rule => {
   fixStatistics[rule] = 0;
 });
 
@@ -42,8 +45,8 @@ scssFiles.forEach(file => {
   const parsedTree = gonzales.parse(contents, { syntax: 'scss' });
 
   // for each rule, call with current file contents
-  Object.keys(rules).forEach(rule => {
-    const fixedCount = rulesFix[rule](parsedTree);
+  rules.forEach(rule => {
+    const fixedCount = rulesMethods[rule](parsedTree);
     fixStatistics[rule] += fixedCount;
   });
 
