@@ -3,6 +3,7 @@ const emptyLineBetweenBlocks = require('./empty-line-between-blocks');
 const hexLength = require('./hex-length');
 const hexNotation = require('./hex-notation');
 const leadingZero = require('./leading-zero');
+const noTrailingZero = require('./no-trailing-zero');
 const quotes = require('./quotes');
 const shorthandValues = require('./shorthand-values');
 const spaceAfterColon = require('./space-after-colon');
@@ -16,6 +17,7 @@ module.exports = {
   hexLength,
   hexNotation,
   leadingZero,
+  noTrailingZero,
   quotes,
   shorthandValues,
   spaceAfterColon,
