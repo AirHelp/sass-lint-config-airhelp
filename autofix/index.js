@@ -6,10 +6,15 @@ const yargs = require('yargs');
 const rulesMethods = require('./rules');
 
 const { log } = console;
-let { rules, dir } = yargs.array('dir').array('rules').argv;
+const argv = yargs.array('dir').array('rules').argv;
+let { rules, dir } = argv;
 
 // process user inputs
-rules = rules.map(rule => rule.replace(/-([a-z])/g, (m, w) => w.toUpperCase())); // camelCased
+if (rules) {
+  rules = rules.map(rule => rule.replace(/-([a-z])/g, (m, w) => w.toUpperCase())); // camelCased
+} else {
+  rules = Object.keys(rulesMethods);
+}
 
 // configuration
 const root = process.cwd();
@@ -51,11 +56,13 @@ scssFiles.forEach(file => {
   });
 
   // write fixed content to file
-  fs.writeFile(fullPath, parsedTree.toString(), error => {
-    if (error) {
-      console.log(error);
-    }
-  });
+  if (argv.ns !== true) {
+    fs.writeFile(fullPath, parsedTree.toString(), error => {
+      if (error) {
+        console.log(error);
+      }
+    });
+  }
 });
 
 // display fix statistics
