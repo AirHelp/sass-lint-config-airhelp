@@ -7,6 +7,7 @@ const noTrailingZero = require('./no-trailing-zero');
 const quotes = require('./quotes');
 const shorthandValues = require('./shorthand-values');
 const spaceAfterColon = require('./space-after-colon');
+const spaceAfterComma = require('./space-after-comma');
 const spaceBeforeColon = require('./space-before-colon');
 const zeroUnit = require('./zero-unit');
 
@@ -21,6 +22,7 @@ module.exports = {
   quotes,
   shorthandValues,
   spaceAfterColon,
+  spaceAfterComma,
   spaceBeforeColon,
   zeroUnit,
 };
