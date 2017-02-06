@@ -14,9 +14,9 @@ function spaceAfterComma(tree) {
         const next = parent.get(index + 1);
 
         if (!next || !next.is('space')) {
-          const node = gonzales.createNode({ type: 'space', content: ' ' });
+          const spaceNode = gonzales.createNode({ type: 'space', content: ' ' });
 
-          parent.content.splice(index + 1, 0, node);
+          parent.content.splice(index + 1, 0, spaceNode);
 
           fixCount++;
         }

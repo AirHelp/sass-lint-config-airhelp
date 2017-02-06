@@ -8,6 +8,7 @@ const quotes = require('./quotes');
 const shorthandValues = require('./shorthand-values');
 const spaceAfterColon = require('./space-after-colon');
 const spaceAfterComma = require('./space-after-comma');
+const spaceBeforeBrace = require('./space-before-brace');
 const spaceBeforeColon = require('./space-before-colon');
 const zeroUnit = require('./zero-unit');
 
@@ -23,6 +24,7 @@ module.exports = {
   shorthandValues,
   spaceAfterColon,
   spaceAfterComma,
+  spaceBeforeBrace,
   spaceBeforeColon,
   zeroUnit,
 };
