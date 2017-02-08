@@ -6,8 +6,18 @@ const yargs = require('yargs');
 const rulesMethods = require('./rules');
 
 const { log } = console;
-const argv = yargs.array('dir').array('rules').argv;
-let { rules, dir } = argv;
+const argv = yargs
+  .usage('Usage: $0 --dir [array] --rules [array]')
+  .describe('dir', 'Directories to fix')
+  .describe('rules', 'Rules to fix')
+  .describe('ns', 'Do not save fix results back to files')
+  .demandOption(['dir'])
+  .help('h')
+  .alias('h', 'help')
+  .array('dir').array('rules').boolean('no-save').argv;
+
+let { rules } = argv;
+const { dir } = argv;
 
 // process user inputs
 if (rules) {
