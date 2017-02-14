@@ -7,7 +7,7 @@ function emptyLineBetweenBlocks(tree) {
     if (node.is('ruleset') && index > 0) {
       const prev = parent.get(index - 1);
 
-      // fix only if any of leading elements is anything than space
+      // do not fix if all of leading siblings are spaces
       const leadingSiblings = parent.content.slice(0, index);
       if (leadingSiblings.length > 0 && leadingSiblings.every(sibling => sibling.is('space'))) {
         return;
