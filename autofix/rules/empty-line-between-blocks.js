@@ -20,7 +20,6 @@ function emptyLineBetweenBlocks(tree) {
       }
 
       if (prev && prev.is('space') && !/(\n){2}/.test(prev.content)) {
-        console.log(parent);
         prev.content = prev.content.replace('\n', '\n\n');
 
         fixCount++;
