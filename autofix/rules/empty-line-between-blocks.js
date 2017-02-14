@@ -8,15 +8,9 @@ function emptyLineBetweenBlocks(tree) {
       const prev = parent.get(index - 1);
 
       // fix only if any of leading elements is anything than space
-      let leadingIndex = index - 1;
-      while (true) {
-        if (!parent.get(leadingIndex).is('space')) {
-          break;
-        }
-
-        if (--leadingIndex < 0) {
-          return;
-        }
+      const leadingSiblings = parent.content.slice(0, index);
+      if (leadingSiblings.length > 0 && leadingSiblings.every(sibling => sibling.is('space'))) {
+        return;
       }
 
       if (prev && prev.is('space') && !/(\n){2}/.test(prev.content)) {
