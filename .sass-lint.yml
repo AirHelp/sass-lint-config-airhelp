@@ -77,7 +77,6 @@ rules:
     - 1
     - include: true
   mixins-before-declarations: 1
-  no-attribute-selectors: 1
   no-mergeable-selectors: 1
   no-trailing-zero: 1
   no-vendor-prefixes: 1
