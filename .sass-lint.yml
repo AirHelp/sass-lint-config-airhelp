@@ -46,6 +46,7 @@ rules:
   leading-zero:
     - 2
     - include: true
+  mixins-before-declarations: 2
   mixin-name-format:
     - 2
     - convention: hyphenatedlowercase
@@ -81,5 +82,4 @@ rules:
     - allow-leading-underscore: false
   zero-unit: 2
 
-  mixins-before-declarations: 1
   no-vendor-prefixes: 1

@@ -1,6 +1,7 @@
 # sass-lint-config-airhelp
 npm package with AirHelp SASSLint shareable config
-##Usage
+
+## Usage
 1. Install `sass-lint`
 ```
   npm install --save-dev sass-lint
@@ -11,20 +12,7 @@ npm package with AirHelp SASSLint shareable config
 options:
   config-file: node_modules/sass-lint-config-airhelp/.sass-lint.yml
 ```
-##Contribution
-Please introduce changes in separate PRs.
 
-This package is using [simple-git-changelog](https://github.com/ianhenderson/simple-git-changelog) for creating changelog. Please use following prefixes for all commits that are supposed to be part of changelog:
-* `changelog`
-* `fix`
-* `docs`
-* `chore`
-* `feat`
-* `feature`
-* `refactor`
-* `update`
+## Changelog
 
-for example:
-```
-git commit -m "fix: lorem ispum dolor"
-```
+Please refer to [Changelog](CHANGELOG.md)

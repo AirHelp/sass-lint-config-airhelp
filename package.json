@@ -25,12 +25,9 @@
     "url": "https://github.com/AirHelp/sass-lint-config-airhelp/issues"
   },
   "homepage": "https://github.com/AirHelp/sass-lint-config-airhelp#readme",
-  "dependencies": {
+  "devDependencies": {
     "gonzales-pe": "^4.0.3",
     "walk-sync": "^0.3.1",
     "yargs": "^6.6.0"
-  },
-  "devDependencies": {
-    "simple-git-changelog": "^1.5.0"
   }
 }
