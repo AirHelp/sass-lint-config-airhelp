@@ -77,8 +77,8 @@ graceful-fs@^4.1.2:
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.1.11.tgz#0e8bdfe4d1ddb8854d64e04ea7c00e2a026e5658"
 
 hosted-git-info@^2.1.4:
-  version "2.1.5"
-  resolved "https://registry.yarnpkg.com/hosted-git-info/-/hosted-git-info-2.1.5.tgz#0ba81d90da2e25ab34a332e6ec77936e1598118b"
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/hosted-git-info/-/hosted-git-info-2.2.0.tgz#7a0d097863d886c0fabbdcd37bf1758d8becf8a5"
 
 invert-kv@^1.0.0:
   version "1.0.0"
@@ -219,10 +219,6 @@ require-main-filename@^1.0.1:
 set-blocking@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/set-blocking/-/set-blocking-2.0.0.tgz#045f9782d011ae9a6803ddd382b24392b3d890f7"
-
-simple-git-changelog@^1.5.0:
-  version "1.7.0"
-  resolved "https://registry.yarnpkg.com/simple-git-changelog/-/simple-git-changelog-1.7.0.tgz#15ee3fd1f2a450efd65cbf57ce28a1af4e230ca2"
 
 spdx-correct@~1.0.0:
   version "1.0.2"
