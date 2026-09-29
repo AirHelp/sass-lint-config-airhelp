@@ -1,0 +1,6 @@
+- **Shared stylesheet lint rules** — publishes AirHelp's common Sass/SCSS style conventions as a shareable lint configuration consumed by frontend projects.
+  - **Convention enforcement** — defines rules for formatting, naming, colour notation, spacing, and property ordering so stylesheets stay consistent across teams.
+  - **Drop-in adoption** — lets a project point its lint setup at the packaged config file instead of maintaining its own rule set.
+- **Automatic style fixing** — bundles a command-line autofix tool that scans chosen directories of stylesheets and rewrites them to satisfy selected rules.
+  - **Rule-scoped fixes** — corrects issues such as hex colour length and notation, leading/trailing zeros, zero units, quotes, shorthand values, border-zero, and spacing around colons, commas, and braces.
+  - **Dry-run mode** — reports fixes without saving changes back to files.

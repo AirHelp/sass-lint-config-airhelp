@@ -1,0 +1,6 @@
+---
+name: sass-lint-config-airhelp
+kind: libraries
+domain: developer-tooling
+description: |
+  Sass-lint-config-airhelp is AirHelp's **shareable Sass/SCSS lint configuration** package. Frontend projects depend on it to enforce the company's common **stylesheet conventions**, and it ships an **autofix command-line tool** that rewrites stylesheets to comply with the rules automatically.
